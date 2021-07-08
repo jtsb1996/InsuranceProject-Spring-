@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel = "stylesheet" href = "CSS.css">
+<meta charset="ISO-8859-1">
+<title>HomePage</title>
+</head>
+<body>
+	<div align = "left"><form action = "logout"><button type = "submit">Logout</button></form></div>
+	<div align =  "center"> <h1>Welcome <span data-th-text="${name}"></span></h1></div>
+	<div class = "center">
+		<table>
+			<tr>
+				<td>
+					<div align="center">
+						<form action = "insuranceCart">
+						<input type = "hidden" name = "name" data-th-value = "${name}"/>
+						<button type = "submit">Insurance Cart</button>
+						</form>
+					</div>
+				</td>
+				<td>
+					<div align = "center">
+						<form action = "displayInsurance">
+						<input type = "hidden" name = "name" data-th-value ="${name}">
+						<button type = "submit">Search All</button>
+						</form>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<form action="displayInsuranceBy">
+		<table>
+			<tr class = "table-row">
+				<td class = "table-row-items">
+					<p>Search Based on:</p>
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr class = "table-row">
+				<td class = "table-row-items">Type</td>
+				<td class = "table-row-items">
+					<select name = "type">
+					<option data-th-value="null" data-th-text="Select">					
+					<option data-th-each="type:${typelist}" data-th-value="${type}" data-th-text ="${type}">
+					</select>
+				</td>
+			</tr>
+			<tr class = "table-row">
+				<td class = "table-row-items">Company</td>
+				<td class = "table-row-items">
+					<select name = "company">
+					<option data-th-value="null" data-th-text="Select">
+					<option data-th-each="company:${companylist}" data-th-value="${company}" data-th-text ="${company}">
+					</select>
+				</td>
+			</tr>
+			<tr class = "table-row">
+				<td class = "table-row-items">Policy Maximum Age</td>
+				<td class = "table-row-items">
+					<input type  = "text" name = "age" value = "0"/>
+				</td>
+			</tr>
+			<tr class = "table-row">
+				<td class = "table-row-items">Condition Type</td>
+				<td></td>
+			</tr>
+			<tr class = "table-row" data-th-each="conditionName:${conditionNameList}">
+				<td class = "table-row-items">
+					<input type = "checkbox" name = "conditionName" data-th-value = "${conditionName}" data-th-text = "${conditionName}"><span data-th-value = "${conditionName}"></span>
+				</td>
+				<td>
+			</tr>
+			<tr class = "table-row">
+				<td class = "table-row-items"><input type = "hidden" name = "name" data-th-value ="${name}"><button type = "submit">Search </button></td>
+			</tr>
+		</table>
+		</form>
+	</div>
+	<jsp:include page = "searchView.jsp"/>
+</body>
+<script data-th-inline="javascript">
+/*function displayBox() {
+	document.getElementById("displayBox1").style.display = "flex";
+	var select = document.getElementById("selectbox");
+	var option = select.options[select.selectedIndex].value;
+	if(option == "MaximumAge" || option == "MinimumAge") {
+		document.getElementById("displayBox1").innerHTML = '<td class = "table-row-items">Condition</td> <td class = "table-row-items"> <input type = "text" name = "condition" /></td>';
+	}
+		
+	else {
+		document.getElementById("displayBox1").innerHTML = '<td class = "table-row-items">Condition</td> <td class = "table-row-items"><input type = "radio" name = "condition" value = "T"/><label for="condition">Yes</label><input type = "radio" name = "condition" value = "F"/><label for="condition">No</label></td>';
+		
+	}
+	
+}*/
+
+</script>
+
+</html>

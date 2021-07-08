@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="CSS.css">
+<meta charset="ISO-8859-1">
+<title>Insurance Cart</title>
+</head>
+<body>
+	<form action = "homeView"><input type = "hidden" name = "firstName" data-th-value ="${name}"><button type="submit">Back</button></form>
+	<div align="center">
+		<h1>Insurance Cart</h1>
+	</div>
+	<div class = "center">
+		<table>
+			<tr data-th-if="${cart.empty}">
+			<td>Nothing Found</td>
+			</tr>
+			<tr>
+				<th>Name of Insurance</th>
+				<th>Type of Insurance</th>
+				<th>Company</th>
+				<th>Price</th>
+			</tr>
+			<tr data-th-each="cartItem: ${cart}">
+				<td><span data-th-text="${cartItem.getiName()}"></span></td>
+				<td><span data-th-text="${cartItem.getiType()}"></span></td>
+				<td><span data-th-text="${cartItem.getiCompany()}"></span></td>
+				<td><span data-th-text="${cartItem.getiPrice()}"></span></td>
+				<td><form action = "removeFromCart" data-th-object = "${cartItem}">
+					<input type = "hidden" name = "sId" data-th-value = "${cartItem.getsID()}">
+					<input type = "hidden" name = "firstName" data-th-value = "${name}">
+					<button type = "submit">Remove From Cart</button></form>
+				</td>
+			</tr>
+		</table>
+		<div align = "center"> 
+			<form action = "buyAllPolicies">
+				<input type = "hidden" name = "firstName" data-th-value = "${name}">
+				<button type = "submit" value = "buy">Buy All Policies</button>
+			</form>
+		</div>
+	</div>
+	
+</body>
+</html>

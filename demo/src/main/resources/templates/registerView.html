@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel = "stylesheet" href = "CSS.css">
+<meta charset="ISO-8859-1">
+<title>Registration Page</title>
+</head>
+<body>
+	<form action = "/"><button type="submit">Back</button></form>
+	<div align = "center">
+		<h1>User Registration Form</h1>
+	</div>
+	<div class = "center">
+		<form action = 'registerUser' method = "get">
+		<table>
+			<tr>
+				<td>Name: </td><td> <input type = "text" name = "firstName" required/></td>
+			</tr>
+			<tr>
+			<td>Age: </td><td><input type = "text" name = "age" required>
+			</td>
+			</tr>
+			<tr>
+				<td>User Name: </td><td><input type = "text" name = "userName" required></td>
+			</tr>
+			<tr><td>
+				Password: </td><td><input type = "password" name = "passWord" required>
+			</td></tr>
+			<tr><td>
+				Security Question</td><td>
+					<select name = "securityQ">
+						<option value = "dob">Date of Birth</option>
+						<option value = "address">Address</option>
+					</select>
+			</td></tr>
+			<tr>
+				<td>Answer: </td><td><input type = "text" name = "securityA" required>
+			</td></tr>
+			<tr>
+				<td>
+				</td>
+				<td><div class = "grouprow"><button type = "submit">Register</button></div></td>
+			</tr>
+		</table>
+		</form>
+	</div>
+</body>
+</html>

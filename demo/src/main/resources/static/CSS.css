@@ -1,0 +1,101 @@
+@charset "ISO-8859-1";
+
+body {
+  height: 500px;
+  background-color: lightblue; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right, #e6f7ff, white);
+}
+.adminButton {
+	width: 100%;
+}
+.center {
+  margin: auto;
+  width: 80%;
+  border: 3px solid grey;
+  padding: 50px;
+  padding-top:10px;
+  border-radius:5px;
+}
+.topic{
+	font-family: courier;
+  	font-size: 200%;
+}
+.topic2{
+	font-family: courier;
+  	font-size: 100%;
+}
+.grouprow{
+	padding-bottom:10px;
+}
+.btn {
+	width : 20%;
+	margin-top: 10px;
+}
+
+.table {
+	width: 100%;
+	border: 1px solid;
+}
+
+.table-header {
+	display:flex;
+	width: 100%;
+	background: #000;
+	padding:(half-spacing-unit *1.5) 0;
+}
+
+.table-row {
+	display:flex;
+	border: 1px solid;
+	width: 100%;
+	padding:(half-spacing-unit *1.5) 0;
+	
+}
+tr:nth-child(even){background-color: white}
+
+th {
+  background-color: #04AA6D;
+  color: white;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  padding:10px;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+.table-header-items {
+	flex: 1 1 20%;
+	text-align: center;
+	color: white;
+}
+
+.table-row-items {
+	flex: 1 1 20%;
+	text-align: center;
+	color: black;
+	padding: 5px;
+}
+
+.gtable {
+	width: 100%;
+}
+
+.grow{
+	width: 100%;
+	border: 1px solid;
+}
+
+.ghead{
+	width: 50%;
+}
+
+.gdata {
+	width: 50%;
+}
+
+

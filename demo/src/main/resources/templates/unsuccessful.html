@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>UnSuccessful!</title>
+</head>
+<body>
+	<div align = "center"><h1>Not Successful!</h1></div>
+	<div align = "center"><p>Please wait a moment while we redirect you back!</p></div>
+</body>
+
+<script data-th-inline="javascript">
+/*<!CDATA[*/
+window.setTimeout(function(){
+	var name = /*[[${name}]]*/ null;
+	window.location.href="/displayLogin";
+},3000);
+/*]]>*/
+</script>
+</html>
+

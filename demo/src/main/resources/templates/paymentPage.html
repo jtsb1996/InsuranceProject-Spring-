@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel = "stylesheet" href="CSS.css">
+<meta charset="ISO-8859-1">
+<title>Payment Page</title>
+</head>
+<body>
+	<form action = "insuranceCart"><input type = "hidden" name = "name" data-th-value ="${name}"><input type = "hidden" name = "${cart}"><button type="submit">Back</button></form>
+	<div align = "center"><h1>Payment Page</h1></div>
+	<div class = "center">
+		<form action="submitCredentials">
+		<table>
+			<tr>
+				<td>Name on Card</td>
+				<td><input type = "text" name = "cardName" required></td>
+				
+			</tr>
+			<tr>
+			<td>Type of Card</td>
+			<td><select name = "cardType">
+				<option value = "visa">Visa</option>
+				<option value = "masterCard">MasterCard</option>
+				</select>
+			</td>
+			</tr>
+			<tr>
+				<td>Card Number </td>
+				<td><input type = "text" name = "cardNo" required></td>
+			</tr>
+			<tr>
+				<td>CVV</td>
+				<td><input type = "text" name = "cvv" required></td>
+			</tr>
+			<tr>
+				<td>Total Price of Policies: </td>
+				<td><span data-th-text = "${price}"></span></td>
+			</tr>
+			<tr>
+				<td><input type = "hidden" name = "name" data-th-value= "${name}"></td>
+				<td><button type = "submit">Submit</button></td>
+			</tr>
+		</table>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="CSS.css">
+<meta charset="ISO-8859-1">
+<title>List Of Insurances</title>
+</head>
+<body>
+	<form action = "homeView"><input type = "hidden" name = "firstName" data-th-value ="${name}"><button type="submit">Back</button></form>
+	<div align = "center">
+		<h1>List of Insurance Found</h1>
+	</div>
+	<div class = "center">
+		<table>
+			<tr data-th-if="${list.empty}">
+				<td> No Insurance Available </td>
+			</tr>
+			<tr>
+				<th>Name of Insurance</th>
+				<th>Type of Insurance</th>
+				<th>Company</th>
+				<th>Price of Insurance</th>
+			</tr>
+			<tr data-th-each= "insurance : ${list}">
+				<td><span data-th-text="${insurance.getiName()}">Name</span></td>
+				<td><span data-th-text="${insurance.getiType()}">Type</span></td>
+				<td><span data-th-text="${insurance.getiCompany()}">Company</span></td>
+				<td><span data-th-text="${insurance.getiPrice()}">Company</span></td>
+				<td>
+					<form action = "addtoCart">
+					<input type = "hidden" name = "name" data-th-value ="${name}"/>
+					<input type = "hidden" name = "iName" data-th-value = "${insurance.getiName()}" />
+					<input type = "hidden" name = "iType" data-th-value = "${insurance.getiType()}" />
+					<input type = "hidden" name = "iCompany" data-th-value = "${insurance.getiCompany()}" />
+					<input type = "hidden" name = "iPrice" data-th-value = "${insurance.getiPrice()}" />
+					<button type = "submit">Cart</button>
+					</form>
+				</td>
+			</tr>
+		</table>
+		
+	</div>
+</body>
+</html>

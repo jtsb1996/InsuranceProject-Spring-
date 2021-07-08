@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Answer Security Question</title>
+</head>
+<body>
+	<div align = "center">
+		<form action = "verifySecurity">
+			<p> Security Question: <span data-th-text="${question}"></span></p>
+			Answer: <input type = "text" name = "securityA">
+			<input type = "hidden" name = "id" data-th-value = "${id}">
+			<button type ="submit">Submit</button>
+		</form>
+	</div>
+</body>
+</html>

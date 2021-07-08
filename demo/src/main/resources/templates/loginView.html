@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel = "stylesheet" href = "CSS.css">
+<title>Login</title>
+</head>
+<body>
+	<form action = "/"><button type="submit">Back</button></form>
+	<div align = "center">
+		<h1>Insure Insurance Company</h1>
+		<form action = "verifyLogin" method = "get">
+			<div class = "grouprow">
+				Username: <input type = "text" id = "username" name = "userName"/>
+			</div>
+			<div class = "grouprow">
+				Password:<input type = "password" id = "password" name = "passWord"/>
+			</div>
+			<div class = "grouprow">
+				<button type = "submit" name="verifyLogin">Login</button>
+			</div>
+		</form>	
+		<form action = "displayForgetPassword">
+			<button type = "submit">Forget Password</button>
+		</form>
+			
+	</div>
+</body>
+</html>
